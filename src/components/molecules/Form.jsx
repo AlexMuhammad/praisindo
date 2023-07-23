@@ -62,7 +62,7 @@ const FormLogin = () => {
                                     errors={errors.password}
                                 />
                             </div>
-                            <button className="bg-prs-primary text-center py-3 rounded-xl text-white font-semibold">Submit</button>
+                            <button className="bg-prs-primary text-center py-3 rounded-xl text-white font-semibold">Login</button>
                         </Form>
                     )
                 }}

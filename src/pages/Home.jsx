@@ -5,6 +5,7 @@ import Tes from "../assets/images/valen.png"
 import { useEffect } from "react";
 import { getToken } from "../lib/helper";
 import { useNavigate } from "react-router-dom";
+import { MENUS } from "../lib/utils";
 
 const Home = () => {
     const token = getToken();
@@ -31,14 +32,12 @@ const Home = () => {
                 <div className="w-full h-full sm:max-w-xl mx-auto px-5">
                     <div className="w-full px-5 h-64 sm:max-w-xl mx-auto -mt-32 bg-white drop-shadow rounded-2xl">
                         <div className="grid grid-cols-4 place-items-center items-center h-full">
-                            <h1>tess</h1>
-                            <h1>tess</h1>
-                            <h1>tess</h1>
-                            <h1>tess</h1>
-                            <h1>tess</h1>
-                            <h1>tess</h1>
-                            <h1>tess</h1>
-                            <h1>tess</h1>
+                            {MENUS.map((menu, i) => (
+                                <div key={i} className="flex flex-col items-center gap-2">
+                                    <img src={menu.image} alt={menu.name} className="w-10" />
+                                    <p className="text-center text-sm font-semibold text-gray-500">{menu.name}</p>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
