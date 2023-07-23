@@ -2,8 +2,21 @@ import MainLayout from "../components/templates/MainLayout"
 
 import { AiFillCaretUp, AiOutlineRise, AiFillInfoCircle } from "react-icons/ai";
 import Tes from "../assets/images/valen.png"
+import { useEffect } from "react";
+import { getToken } from "../lib/helper";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+    const token = getToken();
+    const navigate = useNavigate();
+    useEffect(() => {
+        if (token) {
+            navigate("/")
+        } else {
+            navigate("/login")
+        }
+    }, [])
+
     return (
         <MainLayout as="home">
             <section className="flex flex-col flex-1 pt-16">

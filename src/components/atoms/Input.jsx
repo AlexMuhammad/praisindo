@@ -1,19 +1,21 @@
-import { PropTypes } from 'prop-types';
+/* eslint-disable react/prop-types */
 
-const Input = ({ placeholder, handleChange, error, name }) => {
+const Input = ({
+    type,
+    placeholder,
+    name,
+    value,
+    handleChange,
+    handleBlur,
+    touched,
+    errors,
+}) => {
     return (
         <>
-            <input type="text" name={name} id="" className="border-b-2 border-prs-secondary w-full pb-1 outline-none text-sm" placeholder={placeholder} onChange={handleChange} />
-            <p className='text-red-500 text-xs italic'>{!error ? null : "Format Email Tidak Sesuai"}</p>
+            <input type={type} name={name} className="border-b-2 border-prs-secondary w-full pb-1 outline-none text-sm" value={value} placeholder={placeholder} onChange={handleChange} onBlur={handleBlur} autoComplete="" />
+            <p className='text-red-500 text-xs italic'>{touched && errors ? errors : null}</p>
         </>
     )
-}
-
-Input.propTypes = {
-    placeholder: PropTypes.string,
-    error: PropTypes.bool,
-    handleChange: PropTypes.func,
-    name: PropTypes.string
 }
 
 export default Input

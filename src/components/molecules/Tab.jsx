@@ -234,7 +234,7 @@ const TabFilter = ({ as }) => {
                         </div>
 
                     case "transactions":
-                        return <div className="w-full max-w-full py-16 sm:px-0 px-5">
+                        return <div className="w-full max-w-full py-16">
                             <Tab.Group>
                                 <Tab.List className="fixed flex w-full space-x-1 bg-white sm:max-w-xl">
                                     {Object.keys(categories).map((category) => (

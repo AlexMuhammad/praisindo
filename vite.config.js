@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import { defineConfig } from 'vite'
 import { VitePWA } from "vite-plugin-pwa";
 import react from '@vitejs/plugin-react'
@@ -14,7 +13,8 @@ const manifestForPlugin = {
       {
         "src": "/icon-192x192.png",
         "sizes": "192x192",
-        "type": "image/png"
+        "type": "image/png",
+        "purpose": "maskable"
       },
       {
         "src": "/icon-256x256.png",

@@ -1,15 +1,9 @@
-import { BiChevronLeft, BiBellOff, BiDownArrowAlt, BiChevronRight } from "react-icons/bi"
+import { BiChevronRight, BiDownArrowAlt } from "react-icons/bi"
+import MainLayout from "../components/templates/MainLayout"
 
 const Notification = () => {
     return (
-        <div className="flex flex-col min-h-screen bg-gray-200 font-poppins">
-            <header className="fixed flex items-center justify-center w-full h-16 z-50">
-                <div className="w-full sm:max-w-xl mx-auto flex justify-between items-center h-full px-4 space-x-5 bg-white">
-                    <BiChevronLeft className="text-3xl text-prs-primary" />
-                    <span className="text-xl font-bold">Notifications</span>
-                    <BiBellOff className="text-3xl text-prs-primary" />
-                </div>
-            </header>
+        <MainLayout as="notification">
             <section className="flex-1 pt-16">
                 <div className="w-full h-full sm:max-w-xl mx-auto px-4 bg-white">
                     <div className="flex items-center justify-between">
@@ -26,7 +20,7 @@ const Notification = () => {
                 </div>
             </section>
             <section className="flex-1"></section>
-        </div>
+        </MainLayout>
     )
 }
 
