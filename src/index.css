@@ -2,3 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+body {
+  scroll-behavior: smooth;
+}
+
+.scroll-container {
+  /* Properti untuk menyembunyikan tampilan scroll di berbagai browser */
+  &::-webkit-scrollbar {
+    display: none; /* Untuk Chrome, Safari, dan Opera */
+  }
+  &::-moz-scrollbar {
+    display: none; /* Untuk Firefox */
+  }
+  -ms-overflow-style: none; /* Untuk Internet Explorer dan Microsoft Edge */
+  scrollbar-width: none; /* Untuk browser modern yang mendukung */
+}
